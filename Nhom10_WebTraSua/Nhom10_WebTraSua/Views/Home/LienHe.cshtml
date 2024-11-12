@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "LienHe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .content {
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        color: #6B3E26;
+    }
+
+    .info-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .info-section div {
+            min-width: 35%;
+        }
+
+    .nav-tabs {
+        border: none;
+    }
+
+        .nav-tabs .nav-link {
+            border-radius: 0;
+            color: #6B3E26;
+            font-weight: bold;
+        }
+
+            .nav-tabs .nav-link.active {
+                background-color: #d2691e;
+                color: #fff;
+            }
+
+    .tab-content {
+        margin-top: 20px;
+    }
+</style>
+
+<div class="container">
+    <div class="content">
+        <h2><b>THÔNG TIN LIÊN HỆ</b></h2>
+        <div class="info-section">
+            <div class="tab-links">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="gioithieu-tab" data-bs-toggle="tab" href="#gioithieu" role="tab" aria-controls="gioithieu" aria-selected="true">Giới thiệu công ty</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="cauhoi-tab" data-bs-toggle="tab" href="#cauhoi" role="tab" aria-controls="cauhoi" aria-selected="false">Câu hỏi thường gặp</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="lienhe-tab" data-bs-toggle="tab" href="#lienhe" role="tab" aria-controls="lienhe" aria-selected="false">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="gioithieu" role="tabpanel" aria-labelledby="gioithieu-tab">
+                        <h4>Giới thiệu công ty</h4>
+                        <p>Công ty Cổ Phần BuBu Milk là thương hiệu trà sữa uy tín, chuyên cung cấp các sản phẩm chất lượng cao, phong phú hương vị, phù hợp với khẩu vị người Việt. BuBu Milk cam kết mang đến trải nghiệm tuyệt vời cho khách hàng.</p>
+                    </div>
+                    <div class="tab-pane fade" id="cauhoi" role="tabpanel" aria-labelledby="cauhoi-tab">
+                        <h4>Câu hỏi thường gặp</h4>
+                        <p>Đây là danh sách các câu hỏi thường gặp về sản phẩm và dịch vụ của chúng tôi.</p>
+                        <ul>
+                            <li>
+                                <p><b>Trà sữa của bạn có bao nhiêu loại?</b></p>
+                                <p>Chúng tôi cung cấp nhiều loại trà sữa, bao gồm trà sữa truyền thống, trà sữa matcha, trà sữa dâu, trà sữa bạc hà, trà sữa ô long, và nhiều lựa chọn khác.</p>
+                            </li>
+                            <li>
+                                <p><b>Tôi có thể chọn độ ngọt như thế nào?</b></p>
+                                <p>Bạn có thể chọn độ ngọt từ 0% đến 100%, tùy theo sở thích của mình. Chúng tôi cũng có các lựa chọn ít ngọt hoặc không ngọt cho những khách hàng muốn kiểm soát lượng đường.</p>
+                            </li>
+                            <li>
+                                <p><b>Các loại topping có sẵn là gì?</b></p>
+                                <p>Chúng tôi cung cấp nhiều loại topping như trân châu đen, trân châu trắng, thạch trái cây, pudding, và nhiều loại khác.</p>
+                            </li>
+                            <li>
+                                <p><b>Có giảm giá hoặc chương trình khuyến mãi không?</b></p>
+                                <p>Chúng tôi thường xuyên có các chương trình giảm giá, khuyến mãi đặc biệt vào các dịp lễ, sinh nhật hoặc với các combo trà sữa. Hãy theo dõi chúng tôi trên mạng xã hội để cập nhật thông tin khuyến mãi mới nhất!</p>
+                            </li>
+                            <li>
+                                <p><b>Trà sữa của bạn có sử dụng phẩm màu hay hóa chất không?</b></p>
+                                <p>Chúng tôi cam kết sử dụng nguyên liệu tự nhiên và an toàn cho sức khỏe, không sử dụng phẩm màu hay hóa chất độc hại trong sản phẩm của mình.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="lienhe" role="tabpanel" aria-labelledby="lienhe-tab">
+                        <h4>Liên hệ</h4>
+                        <ul>
+                            <li><p><strong>Trụ sở chính:</strong> Công ty Cổ Phần BuBu Milk - ĐKKD: 0123456789 do sở Đại Học Công Thương cấp lần đầu ngày 31/12/2024</p></li>
+                            <li><p><strong>Địa chỉ:</strong> Phòng A207, Tầng 2, Tòa nhà A</p></li>
+                            <li><p><strong>Hotline Đặt hàng:</strong> 1234 5678</p></li>
+                            <li><p><strong>Hotline Công ty:</strong> 1234 2345 99 (Bấm phím 0: Lễ Tân | phím 1: CSKH)</p></li>
+                            <li>
+                                <p><strong>Email:</strong></p>
+                                <ul>
+                                    <li>Phòng kinh doanh: <a href="mailto:bubu@milktea.com">bubu@milktea.com</a></li>
+                                    <li>Phòng marketing: <a href="mailto:infobubu@milk.nhom10.com">infobubu@milk.nhom10.com</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

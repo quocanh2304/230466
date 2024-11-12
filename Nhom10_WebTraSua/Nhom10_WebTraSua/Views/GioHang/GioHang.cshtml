@@ -1,0 +1,110 @@
+﻿@using Nhom10_WebTraSua.Models;
+@model List<GioHang>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GIỎ HÀNG CỦA BẠN</h2>
+<div>
+    <table>
+        <tr>
+            <th>Hình ảnh </th>
+            <th>Mã sản phẩm </th>
+            <th>Tên sản phẩm</th>
+            <th>Kích thước </th>
+            <th>Số lượng </th>
+            <th>Topping </th>
+            <th>Thành tiền </th>
+        </tr>
+        @foreach (GioHang item in Model)
+        {
+            <tr>
+                <td width="20px" height="20px"><img src="/Images/@item.HinhAnh" width="50%" /></td>
+                <td>@item.MaSP</td>
+                <td>@item.TenSP</td>
+                <td>@item.KichThuoc</td>
+                <td>@item.SoLuong</td>
+                <td>@item.Topping</td>
+                <td>@string.Format("{0:0,0}", item.TinhTongTien())</td>
+            </tr>
+        }
+        <tr>
+            <td colspan="3" style="text-align:right;font-weight:bold">Tổng cộng:</td>
+            <td>@ViewBag.TongSoLuong</td>
+            <td> </td>
+            <td>@string.Format("{0:0,0}",ViewBag.TongThanhTien) VNĐ</td>
+        </tr>
+    </table>
+</div>
+<style>
+    h2 {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    div {
+        width: 80%;
+        margin: auto;
+        background-color: #f0f0ff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+    }
+
+        table th {
+            background-color: #ffffcc;
+            color: #333;
+            padding: 8px;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+
+        table td {
+            padding: 8px;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+            table td img {
+                max-width: 50px;
+                height: auto;
+                border-radius: 4px;
+            }
+
+        table tr:last-child td {
+            font-weight: bold;
+            text-align: right;
+            background-color: #ffffe0;
+        }
+
+        table td[colspan="3"] {
+            text-align: right;
+            font-weight: bold;
+            color: #333;
+        }
+
+        table td:last-child {
+            color: red;
+        }
+
+        table tr:last-child td:nth-child(2) {
+            text-align: center;
+            color: blue;
+            font-weight: bold;
+        }
+
+</style>

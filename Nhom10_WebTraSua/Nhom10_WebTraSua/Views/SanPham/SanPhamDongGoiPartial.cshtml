@@ -1,0 +1,9 @@
+﻿@using Nhom10_WebTraSua.Models
+@model List<SANPHAM>
+
+<div class="dropdown-content">
+    @foreach (SANPHAM sp in Model)
+    {
+        @Html.ActionLink(@sp.TENSP, "ShowSanPham", "SanPham", new { masanpham = sp.MASP }, new { @class = "dropdown-item" })
+    }
+</div>
